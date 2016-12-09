@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiples of 3 and 5</title>
+</head>
+<body>
+	review了别人的代码。
+
+	忘记了‘首尾和除以二’这种更简单的方式是在不应该。
+
+	做的时候整除的方法记不清楚，以为‘/‘可以直接整除。需要重新复习一下关于number的相关知识了。
+	<script>
+	// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+	// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+
+	// Note: If the number is a multiple of both 3 and 5, only count it once.
+	function solution(number){
+		  var sum = 0;
+		  var mulitiples3 = Math.floor((number-1)/3);
+		  var mulitiples5 = Math.floor((number-1)/5);
+		  var mulitiples15 = Math.floor((number-1)/15)
+		  for(var i = 1 ; i < mulitiples3+1 ; i++){
+		    sum += 3*i;
+		  };
+		  for(var j = 1 ; j < mulitiples5+1 ; j++){
+		    sum += 5*j;
+		  };
+		  for(var m = 1 ; m < mulitiples15+1 ; m++){
+		    sum -= 15*m;
+		  }
+		  return sum;
+	}
+	</script>
+</body>
+</html>
