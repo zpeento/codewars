@@ -10,3 +10,5 @@ codewars的javascript练习
 4.Jaden Casing Strings (7 kyu) 2016-12-9
 
 5.Sum of Digits / Digital Root (7 kyu) 2016-12-9
+
+6.Persistent Bugger (6 kyu) 2016-12-10
