@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bit Counting</title>
+</head>
+<body>
+	成功使用reduce函数
+
+	复习了如何转化二进制的知识。
+
+	n.toString(2)//即可转化成二进制
+
+	parseInt('n',2)则将字符串转化回10进制
+
+	在这一题中通过递归计算1的和明显不如filter（）后直接计算1数组的长度好
+	<script>
+	// 	Write a function that takes an (unsigned) integer as input, and returns the number of bits that are equal to one in the binary representation of that number.
+
+	// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+	var countBits = function(n) {
+	  // Program Me
+	  var result = n.toString(2).split('').reduce(function(a,b){
+	    return Number(a) + Number(b);
+	  })
+	  return Number(result);
+	};
+	</script>
+</body>
+</html>
