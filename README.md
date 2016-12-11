@@ -12,3 +12,9 @@ codewars的javascript练习
 5.Sum of Digits / Digital Root (7 kyu) 2016-12-9
 
 6.Persistent Bugger (6 kyu) 2016-12-10
+
+7.Bit Counting (6 kyu) 2016-12-11
+
+8.IQ Test (6 kyu) 2016-12-11
+
+9.Tortoise racing (6 kyu) 2016-12-11
