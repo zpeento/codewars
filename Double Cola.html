@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Double Cola</title>
+</head>
+<body>
+
+	写的不太好 不过运行的还是比较快的。
+
+	复习了Math.log Math.pow的用法  利用Math.log(10)/Math.log(2)确实是求对数的方法
+
+	可以不用求对数的 不过一开始写的方法太慢了
+	<script>
+// 		Sheldon, Leonard, Penny, Rajesh and Howard are in the queue for a "Double Cola" drink vending machine; there are no other people in the queue. The first one in the queue (Sheldon) buys a can, drinks it and doubles! The resulting two Sheldons go to the end of the queue. Then the next in the queue (Leonard) buys a can, drinks it and gets to the end of the queue as two Leonards, and so on.
+
+// For example, Penny drinks the third can of cola and the queue will look like this:
+
+// Rajesh, Howard, Sheldon, Sheldon, Leonard, Leonard, Penny, Penny
+// Write a program that will return the name of a man who will drink the n-th cola.
+
+// Note that in the very beginning the queue looks like that:
+
+// Sheldon, Leonard, Penny, Rajesh, Howard
+
+function whoIsNext(names, r){
+  //your code here
+  var n = names.length;
+  var turns = Math.ceil(r/n); 
+  
+  var temp = Math.floor(Math.log(turns)/Math.log(2));
+  
+  var sum = 0;
+  
+  for(var i = 0 ; i < temp ; i++){
+    sum += Math.pow(2,i)*n;
+  }
+  
+  return names[Math.ceil((r - sum)/Math.pow(2,temp))-1]
+}
+	</script>
+</body>
+</html>
