@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculating with Functions</title>
+</head>
+<body>
+
+	脑子写糊了不过能写出来还是很开心，对js函数的理解更深了。
+
+	学习了Array.prototype.slice.call(arguments)这样来转化arguments的类数组对象的方法 超级实用
+
+	一开始书写的时候使用了arguments.callee.caller的方式 并不能通过，后来搜索发现 原来arguments.callee因为影响浏览器性能，在es5中的strict mode中取消了这一方法。
+	<script>
+		//This time we want to write calculations using functions and get the results. Let's have a look at some examples:
+
+		// seven(times(five())); // must return 35
+		// four(plus(nine())); // must return 13
+		// eight(minus(three())); // must return 5
+		// six(dividedBy(two())); // must return 3
+
+		function zero() {
+		  if(arguments.length > 0){
+		    return eval(0+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 0;
+		}
+		function one() {
+		  if(arguments.length > 0){
+		    return eval(1+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 1;
+		}
+		function two() {
+		  if(arguments.length > 0){
+		    return eval(2+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 2;
+		}
+		function three() {
+		  if(arguments.length > 0){
+		    return eval(3+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 3;
+		}
+		function four() {
+		  if(arguments.length > 0){
+		    return eval(4+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 4;
+		}
+		function five() {
+		  if(arguments.length > 0){
+		    return eval(5+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 5;
+		}
+		function six() {
+		  if(arguments.length > 0){
+		    return eval(6+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 6;
+		}
+		function seven() {
+		  if(arguments.length > 0){
+		    return eval(7+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 7;
+		}
+		function eight() {
+		  if(arguments.length > 0){
+		    return eval(8+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 8;
+		}
+		function nine() {
+		  if(arguments.length > 0){
+		    return eval(9+Array.prototype.slice.call(arguments).join(''))
+		  }
+		  return 9;
+		}
+
+		function plus() {
+		  return '+' + Array.prototype.slice.call(arguments).pop()
+		}
+		function minus() {
+		  return '-' + Array.prototype.slice.call(arguments).pop()
+		}
+		function times() {
+		  return '*' + Array.prototype.slice.call(arguments).pop()
+		}
+		function dividedBy() {
+		  return '/' + Array.prototype.slice.call(arguments).pop()
+		}
+	</script>
+</body>
+</html>

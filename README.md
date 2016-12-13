@@ -20,3 +20,5 @@ codewars的javascript练习
 9.Tortoise racing (6 kyu) 2016-12-11
 
 10.Double Cola (5 kyu) 2016-12-12
+
+11.Calculating with Functions (5 kyu) 2016-12-13
